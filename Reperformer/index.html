@@ -215,17 +215,17 @@
             <a href="https://github.com/xyi1023"> Yu Hong</a>,
             <a href="https://suzhuo.github.io/"> Zhuo Su</a>,
             <a href="https://cn.linkedin.com/in/yingliangzhang"> Yingliang Zhang</a>,
-            <a href="https://people.mpi-inf.mpg.de/~mhaberma/"> Marc Habermann<sup>‡</sup></a>,
-            <a href="http://xu-lan.com/"> Lan Xu<sup>‡</sup></a>
+            <a href="https://people.mpi-inf.mpg.de/~mhaberma/"> Marc Habermann<sup>&dagger;</sup></a>,
+            <a href="http://xu-lan.com/"> Lan Xu<sup>&dagger;</sup></a>
         </p>
         <p class="title">
-            * Equal Contribution &nbsp;&nbsp;&nbsp;&nbsp;‡ Corresponding Author
+            * Equal Contribution &nbsp;&nbsp;&nbsp;&nbsp;&dagger; Corresponding Author
         </p>
         <div class="btn-group" role="group" aria-label="Top menu">
             <a class="btn btn-primary" href="https://arxiv.org/pdf/2409.08353" style="background-color: #B7B7EB; border-color: #B7B7EB;">Paper</a>
-            <a class="btn btn-primary" href="https://cvrmkura-my.sharepoint.com/:f:/g/personal/sdjnes_cvrmkura_onmicrosoft_com/Ene_M2qJ_bpElEMx14sKhFEB9vGjFsaxoRfiDl0YKR_LZQ" style="background-color: #F09BA0; border-color: #F09BA0;">Animation Sequences(PLY format)</a>
-            <a class="btn btn-primary" href="https://github.com/xyi1023/DualGS_Dataset" style="background-color: #9BBBE1; border-color: #9BBBE1;">Dataset Page</a>
-            <a class="btn btn-primary" href="https://cvrmkura-my.sharepoint.com/:f:/g/personal/sdjnes_cvrmkura_onmicrosoft_com/Et4niDRbacBHgKgBOlSDxZEB3VBp24gkh9DEpxaiAbk3sg?e=8B9lzi" style="background-color: #9ba5e1; border-color: #9BBBE1;">Dataset Link</a>
+            <!-- <a class="btn btn-primary" href="https://cvrmkura-my.sharepoint.com/:f:/g/personal/sdjnes_cvrmkura_onmicrosoft_com/Ene_M2qJ_bpElEMx14sKhFEB9vGjFsaxoRfiDl0YKR_LZQ" style="background-color: #F09BA0; border-color: #F09BA0;">Animation Sequences(PLY format)</a> -->
+            <!-- <a class="btn btn-primary" href="https://github.com/xyi1023/DualGS_Dataset" style="background-color: #9BBBE1; border-color: #9BBBE1;">Dataset Page</a> -->
+            <!-- <a class="btn btn-primary" href="https://cvrmkura-my.sharepoint.com/:f:/g/personal/sdjnes_cvrmkura_onmicrosoft_com/Et4niDRbacBHgKgBOlSDxZEB3VBp24gkh9DEpxaiAbk3sg?e=8B9lzi" style="background-color: #9ba5e1; border-color: #9BBBE1;">Dataset Link</a> -->
 
         </div>
         
@@ -256,146 +256,207 @@
 
 </html>
 
-<div class="container">
+<div id="comparisonCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
 
-    <!-- <hr> -->
-    <div class="section hero nerf-_v2 wf-section">
-        <div class="container-2 nerf_header_v2 w-container">
-            <div id="videoCarousel2" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- 第二个轮播组件的内容 -->
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <video width="100%" height="600" autoplay muted controls loop preload="preload"
-                                    poster="video/img/gallery.png">
-                                    <source src="demo/jsy.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <video width="100%" height="600" autoplay muted controls loop preload="none"
-                                    poster="video/img/gallery.png">
-                                    <source src="demo/jyf.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <video width="100%" height="600" autoplay muted controls loop preload="none"
-                                    poster="video/img/gallery.png">
-                                    <source src="demo/hu.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <video width="100%" height="600" autoplay muted controls loop preload="none"
-                                    poster="video/img/gallery.png">
-                                    <source src="demo/wyw.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <video width="100%" height="600" autoplay muted controls loop preload="none"
-                                    poster="video/img/gallery.png">
-                                    <source src="demo/hjx.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="p-2">
-                                <video width="100%" height="600" autoplay muted controls loop preload="none"
-                                    poster="video/img/gallery.png">
-                                    <source src="demo/pico.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 继续添加其他轮播项 -->
+        <!-- 第一项 -->
+        <div class="carousel-item active">
+            <div class="comparison-container">
+                <div class="video-wrapper video-left">
+                    <video id="video1-1" src="video/converted_videos/Avatar_result/1/flute1_converted.mp4" autoplay loop muted></video>
                 </div>
-                <a class="carousel-control-prev" href="#videoCarousel2" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#videoCarousel2" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="video-wrapper video-right">
+                    <video id="video2-1" src="video/converted_videos/Avatar_result/1/flute2_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="comparison-slider"></div>
+                <div class="label label-left-top">Ours</div>
+                <div class="label label-right-top">HumanRF</div>
             </div>
-            <script>
-                // 等待文档加载完成后运行
-                $(document).ready(function () {
-                    function adjustVideoSize() {
-                        $('.carousel-item video').each(function () {
-                            $(this).css('width', '100%').css('height', 'auto');
-                        });
-                    }
-
-                    // 初次调整
-                    adjustVideoSize();
-
-                    // 监听窗口大小调整
-                    $(window).on('resize', adjustVideoSize);
-
-                    // 监听轮播的 slid 事件
-                    $('#videoCarousel').on('slid.bs.carousel', function () {
-                        adjustVideoSize();
-                    });
-                });
-            </script>
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-                crossorigin="anonymous">
-            </script>
-
-            <script>
-                $(document).ready(function () {
-                    // Pause all videos initially
-                    $('#videoCarousel video').each(function () {
-                        this.pause();
-                    });
-
-                    // Play video on active slide
-                    $('#videoCarousel').on('slide.bs.carousel', function (e) {
-                        var videos = $(this).find('video');
-                        videos.each(function () {
-                            this.pause();
-                        });
-                        var currentVideo = $(e.relatedTarget).find('video')[0];
-                        if (currentVideo) {
-                            currentVideo.play();
-                        }
-                    });
-
-                    // Play the first video on page load
-                    $('#videoCarousel').find('.carousel-item.active video')[0].play();
-                });
-            </script>
         </div>
+
+        <!-- 其余项，按照同样结构依次添加 -->
+        <!-- 第二项 -->
+        <div class="carousel-item">
+            <div class="comparison-container">
+                <div class="video-wrapper video-left">
+                    <video id="video1-2" src="video/converted_videos/Avatar_result/2/gcc_yellowed_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="video-wrapper video-right">
+                    <video id="video2-2" src="video/converted_videos/Avatar_result/2/zsk_gcc_balled_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="comparison-slider"></div>
+                <div class="label label-left-top">Ours</div>
+                <div class="label label-right-top">NeuS2</div>
+            </div>
+        </div>
+
+        <!-- 第三项 -->
+        <div class="carousel-item">
+            <div class="comparison-container">
+                <div class="video-wrapper video-left">
+                    <video id="video1-3" src="video/converted_videos/Avatar_result/4/szh_drum_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="video-wrapper video-right">
+                    <video id="video2-3" src="video/converted_videos/Avatar_result/4/zmh_drum_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="comparison-slider"></div>
+                <div class="label label-left-top">Ours</div>
+                <div class="label label-right-top">Spacetime Gaussian</div>
+            </div>
+        </div>
+
+        <!-- 第四项 -->
+        <div class="carousel-item">
+            <div class="comparison-container">
+                <div class="video-wrapper video-left">
+                    <video id="video1-4" src="video/converted_videos/Avatar_result/5/gcc_basketball_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="video-wrapper video-right">
+                    <video id="video2-4" src="video/converted_videos/Avatar_result/5/zsk_gcc_basketballed_converted.mp4" autoplay loop muted></video>
+                </div>
+                <div class="comparison-slider"></div>
+                <div class="label label-left-top">Ours</div>
+                <div class="label label-right-top">HiFi4G</div>
+            </div>
+        </div>
+
     </div>
+
+    <!-- 控制按钮 -->
+    <a class="carousel-control-prev" href="#comparisonCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#comparisonCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 
+<!-- 样式优化 -->
+<style>
+    #comparisonCarousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1400px; /* 根据需要调整 */
+        margin: 0 auto;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    .comparison-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        aspect-ratio: 16 / 9; /* 保持视频比例 */
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .video-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .comparison-slider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: rgba(255, 255, 255, 0.8);
+        left: 50%;
+        cursor: ew-resize;
+        z-index: 10;
+    }
+
+    .label {
+        position: absolute;
+        padding: 4px 8px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    .label-left-top { top: 10px; left: 10px; }
+    .label-right-top { top: 10px; right: 10px; }
+</style>
+
+<!-- 脚本 -->
+<script>
+    function syncVideos(video1, video2) {
+        video1.addEventListener('play', () => { if (video2.paused) video2.play(); });
+        video1.addEventListener('pause', () => { if (!video2.paused) video2.pause(); });
+        video2.addEventListener('play', () => { if (video1.paused) video1.play(); });
+        video2.addEventListener('pause', () => { if (!video1.paused) video1.pause(); });
+        video1.addEventListener('timeupdate', () => {
+            const currentTime = video1.currentTime;
+            if (Math.abs(currentTime - video2.currentTime) > 0.1) video2.currentTime = currentTime;
+        });
+        video1.addEventListener('seeked', () => { video2.currentTime = video1.currentTime; });
+    }
+
+    function setupSlider(container) {
+        const slider = container.querySelector('.comparison-slider');
+        const videoLeft = container.querySelector('.video-left');
+        const videoRight = container.querySelector('.video-right');
+
+        slider.addEventListener('mousedown', startDragging);
+        function startDragging(e) {
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDragging);
+        }
+
+        function drag(e) {
+            const rect = container.getBoundingClientRect();
+            let offsetX = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+            let percentage = (offsetX / rect.width) * 100;
+            slider.style.left = percentage + '%';
+            videoLeft.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            videoRight.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        }
+        
+
+        function stopDragging() {
+            document.removeEventListener('mousemove', drag);
+            document.removeEventListener('mouseup', stopDragging);
+        }
+    }
+
+    // 初始化所有 comparison-container
+    document.querySelectorAll('.comparison-container').forEach(container => {
+        const video1 = container.querySelector('.video-left video');
+        const video2 = container.querySelector('.video-right video');
+        syncVideos(video1, video2);
+        setupSlider(container);
+    });
+
+    // 轮播切换时自动播放当前页视频
+    $('#comparisonCarousel').on('slide.bs.carousel', function (e) {
+        $('video').each(function () { this.pause(); });
+        const activeVideos = $(e.relatedTarget).find('video');
+        activeVideos.each(function () { this.play(); });
+    });
+</script>
+
+<!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <div class="section">
     <h3 style="text-align: center; color: #7cb0d1;">Overview Video</h3>
     <hr>
@@ -472,135 +533,7 @@
 
             <hr>
 
-            <!-- 添加一个父容器来容纳所有对比容器 -->
-            <div id="comparison-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <div class="comparison-container">
-                    <div class="video-wrapper video-left">
-                        <video id="video1-1" src="comparison/zys1_zys3ed1.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="video2-1" src="comparison/zys3.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">HumanRF</div>
-                </div>
-
-                <div class="comparison-container">
-                    <div class="video-wrapper video-left">
-                        <video id="video1-2" src="comparison/cropped_coser4_ours.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="video2-2" src="comparison/cropped_coser4_neus2.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">NeuS2</div>
-                </div>
-
-                <div class="comparison-container">
-                    <div class="video-wrapper video-left">
-                        <video id="video1-3" src="comparison/cropped_coser4_ours.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="video2-3" src="comparison/cropped_coser4_spacetime.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">Spacetime Gaussian</div>
-                </div>
-
-                <div class="comparison-container">
-                    <div class="video-wrapper video-left">
-                        <video id="video1-4" src="comparison/cropped_coser4_ours.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="video2-4" src="comparison/cropped_coser4_hifi4g.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">HiFi4G</div>
-                </div>
-            </div>
-
-            <script>
-                function syncVideos(video1, video2) {
-                    video1.addEventListener('play', () => {
-                        if (video2.paused) video2.play();
-                    });
-
-                    video1.addEventListener('pause', () => {
-                        if (!video2.paused) video2.pause();
-                    });
-
-                    video2.addEventListener('play', () => {
-                        if (video1.paused) video1.play();
-                    });
-
-                    video2.addEventListener('pause', () => {
-                        if (!video1.paused) video1.pause();
-                    });
-
-                    video1.addEventListener('timeupdate', () => {
-                        const currentTime = video1.currentTime;
-                        if (Math.abs(currentTime - video2.currentTime) > 0.1) {
-                            video2.currentTime = currentTime;
-                        }
-                    });
-
-                    video1.addEventListener('seeked', () => {
-                        video2.currentTime = video1.currentTime;
-                    });
-                }
-
-                function setupSlider(container) {
-                    const slider = container.querySelector('.comparison-slider');
-                    const videoLeft = container.querySelector('.video-left');
-                    const videoRight = container.querySelector('.video-right');
-
-                    slider.addEventListener('mousedown', startDragging);
-
-                    function startDragging() {
-                        document.addEventListener('mousemove', drag);
-                        document.addEventListener('mouseup', stopDragging);
-                    }
-
-                    function drag(e) {
-                        const containerRect = container.getBoundingClientRect();
-                        let offsetX = Math.max(0, Math.min(e.clientX - containerRect.left, containerRect.width));
-                        let offsetPercentage = (offsetX / containerRect.width) * 100;
-
-                        slider.style.left = offsetPercentage + '%';
-                        videoLeft.style.clipPath = `inset(0 ${100 - offsetPercentage}% 0 0)`;
-                        videoRight.style.clipPath = `inset(0 0 0 ${offsetPercentage}%)`;
-                    }
-
-                    function stopDragging() {
-                        document.removeEventListener('mousemove', drag);
-                        document.removeEventListener('mouseup', stopDragging);
-                    }
-                }
-
-                // Set up all video comparisons and sliders
-                for (let i = 1; i <= 4; i++) {
-                    const video1 = document.getElementById(`video1-${i}`);
-                    const video2 = document.getElementById(`video2-${i}`);
-                    syncVideos(video1, video2);
-
-                    const container = video1.closest('.comparison-container');
-                    setupSlider(container);
-
-                    // Apply inline styles for centering
-                    container.style.display = 'flex';
-                    container.style.justifyContent = 'center';
-                    container.style.alignItems = 'center';
-                    container.style.position = 'relative';
-                    container.style.width = '480px'; // 调整单个容器的宽度，确保在两行两列中
-                    container.style.height = '260px'; // 调整高度以适应网格
-                    container.style.boxSizing = 'border-box';
-                }
-            </script>
-        </div>
+            
         
         <div class="section">
             <h3 style="text-align: center; color: #7cb0d1;">Result Gallery</h3>
@@ -616,8 +549,8 @@
             <h2>Acknowledgements</h2>
             <hr>
             <p>
-                The authors would like to thank <strong>Yize Wu</strong> and <strong>Kaixing Zhang</strong> from ShanghaiTech
-                University for insightful suggestions. We also thank the
+                The authors would like to thank <strong>Kaixing Zhang</strong> and <strong>Meihan Zheng</strong> from ShanghaiTech
+                University for processing the dataset. We are grateful to <strong>Yize Wu</strong>,<strong>Lijun chen</strong> from ShanghaiTech and <strong>Heming Zhu</strong> from MPII for insightful discussions. We also thank the
                 reviewers for their feedback. This work was supported by National Key R&D Program of China
                 (2022YFF0902301), Shanghai Local college capacity building program (22010502800). We also
                 acknowledge support from Shanghai Frontiers Science Center of Human-centered Artificial Intelligence

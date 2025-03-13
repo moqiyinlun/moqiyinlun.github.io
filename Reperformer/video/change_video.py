@@ -1,49 +1,64 @@
 import os
 import subprocess
 
-def convert_videos_in_folder(folder_path, output_folder=None):
-    # 如果不指定输出文件夹，默认输出在原文件夹
-    if output_folder is None:
-        output_folder = folder_path
+def find_all_mp4_files(folder_path):
+    """递归查找所有子文件夹下的 MP4 文件"""
+    mp4_files = []
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file.lower().endswith('.mp4'):
+                full_path = os.path.join(root, file)
+                mp4_files.append(full_path)
+    return mp4_files
 
-    # 创建输出文件夹如果不存在
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
+def convert_mp4_file(input_path, output_path):
+    """执行 ffmpeg 转换"""
+    command = [
+        "ffmpeg",
+        "-i", input_path,
+        "-c:v", "libx264",
+        "-vf", "scale=1920:1080,fps=30",
+        "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart",
+        output_path
+    ]
 
-    # 找到所有.mp4文件
-    mp4_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.mp4')]
-    print(f"找到 {len(mp4_files)} 个 MP4 文件：{mp4_files}")
+    print(f"正在转换: {input_path} -> {output_path}")
+    try:
+        subprocess.run(command, check=True)
+        print(f"✅ 成功转换: {output_path}")
+    except subprocess.CalledProcessError as e:
+        print(f"❌ 转换失败: {input_path}")
+        print(e)
 
-    # 遍历所有文件
-    for file_name in mp4_files:
-        input_path = os.path.join(folder_path, file_name)
-        output_name = os.path.splitext(file_name)[0] + "_converted.mp4"
-        output_path = os.path.join(output_folder, output_name)
+def batch_convert_videos(root_folder, output_root=None):
+    """批量转换所有找到的 MP4 文件"""
+    if output_root is None:
+        output_root = os.path.join(root_folder, "converted_videos")
+    
+    if not os.path.exists(output_root):
+        os.makedirs(output_root)
+    
+    mp4_files = find_all_mp4_files(root_folder)
+    print(f"共找到 {len(mp4_files)} 个 MP4 文件。")
 
-        # ffmpeg 命令
-        command = [
-            "ffmpeg",
-            "-i", input_path,
-            "-c:v", "libx264",
-            "-vf", "scale=1280:720,fps=30",
-            "-pix_fmt", "yuv420p",
-            "-movflags", "+faststart",
-            output_path
-        ]
+    for input_path in mp4_files:
+        # 保持相对路径结构
+        relative_path = os.path.relpath(input_path, root_folder)
+        output_path = os.path.join(output_root, os.path.splitext(relative_path)[0] + "_converted.mp4")
 
-        # 执行命令
-        print(f"正在转换: {file_name} -> {output_name}")
-        try:
-            subprocess.run(command, check=True)
-            print(f"✅ 成功转换: {output_name}")
-        except subprocess.CalledProcessError as e:
-            print(f"❌ 转换失败: {file_name}")
-            print(e)
+        # 创建对应的子文件夹
+        output_dir = os.path.dirname(output_path)
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        
+        # 转换视频
+        convert_mp4_file(input_path, output_path)
 
-    print("全部转换完成！")
+    print("🎉 全部转换完成！")
 
-# 示例调用方式
+# 示例执行方式
 if __name__ == "__main__":
-    folder = "comparison"  # 这里替换为你的文件夹路径
-    output_folder = "converted_videos"  # 转换后保存的位置，默认可以为 None
-    convert_videos_in_folder(folder, output_folder)
+    root_folder = r"C:\moqiyinlun\moqiyinlun.github.io\Reperformer\video"  # 替换为你的视频根目录
+    output_folder = "converted_videos"  # 输出文件夹，可自定义
+    batch_convert_videos(root_folder, output_folder)
