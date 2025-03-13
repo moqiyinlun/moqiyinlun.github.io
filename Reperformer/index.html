@@ -346,67 +346,67 @@
 
 <!-- 样式优化 -->
 <style>
-    #comparisonCarousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        max-width: 1400px; /* 根据需要调整 */
-        margin: 0 auto;
-        padding: 0 0;
-        box-sizing: border-box;
-    }
+#comparisonCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    max-width: 3300px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .first-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        aspect-ratio: 4 / 3; /* 保持视频比例 */
-        margin: 0 auto;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
+.first-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95%;
+    max-width: 3300px;
+    height: auto; /* 让高度由宽度和比例决定 */
+    aspect-ratio: 16 / 9; /* 确保容器是16:9 */
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
-    .video-wrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
+.video-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
-    .video-wrapper video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保视频填满容器 */
+}
 
-    .comparison-slider {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, rgb(88, 84, 84), rgb(184, 180, 180));
-        /* background: rgba(196, 183, 183, 0.8); */
-        left: 50%;
-        cursor: ew-resize;
-        z-index: 10;
-        box-shadow: 0 0 10px rgba(21, 20, 20, 0.6);
-    }
+.comparison-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, rgb(88, 84, 84), rgb(184, 180, 180));
+    left: 50%;
+    cursor: ew-resize;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(21, 20, 20, 0.6);
+}
 
-    .label {
-        position: absolute;
-        padding: 4px 8px;
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
-        font-size: 14px;
-        border-radius: 4px;
-    }
+.label {
+    position: absolute;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+}
 
-    .label-left-top { top: 10px; left: 10px; }
-    .label-right-top { top: 10px; right: 10px; }
+.label-left-top { top: 10px; left: 10px; }
+.label-right-top { top: 10px; right: 10px; }
 </style>
 
 <!-- 脚本 -->
@@ -543,161 +543,34 @@
             <h3 style="text-align: center; color: #7cb0d1;">Comparison</h3>
 
             <hr>
-            <div id="comparison-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <div class="comparison-grid-container">
-                    <div class="video-wrapper video-left">
-                        <video id="grid-video1-1" src="video\converted_videos\Comparison\avatar_method\ours_motion_converted.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="grid-video2-1" src="video\converted_videos\Comparison\avatar_method\AG_motion_converted.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-grid-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">HumanRF</div>
-                </div>
-            
-                <div class="comparison-grid-container">
-                    <div class="video-wrapper video-left">
-                        <video id="grid-video1-2" src="comparison/cropped_coser4_ours.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="grid-video2-2" src="comparison/cropped_coser4_neus2.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-grid-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">NeuS2</div>
-                </div>
-            
-                <div class="comparison-grid-container">
-                    <div class="video-wrapper video-left">
-                        <video id="grid-video1-3" src="comparison/cropped_coser4_ours.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="grid-video2-3" src="comparison/cropped_coser4_spacetime.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-grid-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">Spacetime Gaussian</div>
-                </div>
-            
-                <div class="comparison-grid-container">
-                    <div class="video-wrapper video-left">
-                        <video id="grid-video1-4" src="comparison/cropped_coser4_ours.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="video-wrapper video-right">
-                        <video id="grid-video2-4" src="comparison/cropped_coser4_hifi4g.mp4" autoplay loop muted></video>
-                    </div>
-                    <div class="comparison-grid-slider"></div>
-                    <div class="label label-left-top">Ours</div>
-                    <div class="label label-right-top">HiFi4G</div>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="img/comparison1.jpg" style="width:100%; margin-right:-10px; margin-top:20px;">
+                    <h6 style="color: #828688; margin-top: 10px;">
+                        Qualitative comparison with SOTA playback-only methods on novel view synthesis on DualGS dataset.
+                    </h6>
                 </div>
             </div>
             
-            <!-- 脚本 -->
-            <script>
-                function syncGridVideos(video1, video2) {
-                    video1.addEventListener('play', () => { if (video2.paused) video2.play(); });
-                    video1.addEventListener('pause', () => { if (!video2.paused) video2.pause(); });
-                    video2.addEventListener('play', () => { if (video1.paused) video1.play(); });
-                    video2.addEventListener('pause', () => { if (!video1.paused) video1.pause(); });
-                    video1.addEventListener('timeupdate', () => {
-                        const currentTime = video1.currentTime;
-                        if (Math.abs(currentTime - video2.currentTime) > 0.1) video2.currentTime = currentTime;
-                    });
-                    video1.addEventListener('seeked', () => { video2.currentTime = video1.currentTime; });
-                }
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="img/comparison2.jpg" style="width:100%; margin-right:-10px; margin-top:20px;">
+                    <h6 style="color: #828688; margin-top: 10px;">
+                        Qualitative comparison with AP-NeRF, TAVA and SC-GS on both training motion and novel motion synthesis.
+                    </h6>
+                </div>
+            </div>
             
-                function setupGridSlider(gridContainer) {
-                    const slider = gridContainer.querySelector('.comparison-grid-slider');
-                    const videoLeft = gridContainer.querySelector('.video-left');
-                    const videoRight = gridContainer.querySelector('.video-right');
-            
-                    slider.addEventListener('mousedown', startDragging);
-            
-                    function startDragging() {
-                        document.addEventListener('mousemove', drag);
-                        document.addEventListener('mouseup', stopDragging);
-                    }
-            
-                    function drag(e) {
-                        const containerRect = gridContainer.getBoundingClientRect();
-                        let offsetX = Math.max(0, Math.min(e.clientX - containerRect.left, containerRect.width));
-                        let offsetPercentage = (offsetX / containerRect.width) * 100;
-                        slider.style.left = offsetPercentage + '%';
-                        videoLeft.style.clipPath = `inset(0 ${100 - offsetPercentage}% 0 0)`;
-                        videoRight.style.clipPath = `inset(0 0 0 ${offsetPercentage}%)`;
-                    }
-            
-                    function stopDragging() {
-                        document.removeEventListener('mousemove', drag);
-                        document.removeEventListener('mouseup', stopDragging);
-                    }
-                }
-            
-                // Set up all grid video comparisons and sliders
-                for (let i = 1; i <= 4; i++) {
-                    const video1 = document.getElementById(`grid-video1-${i}`);
-                    const video2 = document.getElementById(`grid-video2-${i}`);
-                    syncGridVideos(video1, video2);
-                    const gridContainer = video1.closest('.comparison-grid-container');
-                    setupGridSlider(gridContainer);
-            
-                    // 样式
-                    gridContainer.style.display = 'flex';
-                    gridContainer.style.justifyContent = 'center';
-                    gridContainer.style.alignItems = 'center';
-                    gridContainer.style.position = 'relative';
-                    gridContainer.style.width = '480px';
-                    gridContainer.style.height = '260px';
-                    gridContainer.style.boxSizing = 'border-box';
-                }
-            </script>
-            
-            <!-- 样式 -->
-            <style>
-                .comparison-grid-container {
-                    position: relative;
-                    overflow: hidden;
-                }
-            
-                .comparison-grid-slider {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    width: 4px;
-                    background: rgba(255, 0, 0, 0.8); /* 红色 */
-                    left: 50%;
-                    cursor: ew-resize;
-                    z-index: 10;
-                    border-radius: 2px;
-                    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
-                }
-            
-                .video-wrapper {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-                }
-            
-                .video-wrapper video {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            
-                .label {
-                    position: absolute;
-                    padding: 4px 8px;
-                    background: rgba(0, 0, 0, 0.6);
-                    color: white;
-                    font-size: 14px;
-                    border-radius: 4px;
-                }
-            
-                .label-left-top { top: 10px; left: 10px; }
-                .label-right-top { top: 10px; right: 10px; }
-            </style>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="img/supp_comparison1.png" style="width:80%; margin-right:-10px; margin-top:20px;">
+                    <h6 style="color: #828688; margin-top: 10px;">
+                        Qualitative comparison with Animatable Gaussians.
+                    </h6>
+                </div>
+            </div>
+
+        </div>
             
         
         <div class="section">
