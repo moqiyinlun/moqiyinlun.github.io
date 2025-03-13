@@ -59,6 +59,6 @@ def batch_convert_videos(root_folder, output_root=None):
 
 # 示例执行方式
 if __name__ == "__main__":
-    root_folder = r"C:\moqiyinlun\moqiyinlun.github.io\Reperformer\video"  # 替换为你的视频根目录
-    output_folder = "converted_videos"  # 输出文件夹，可自定义
+    root_folder = r"C:\moqiyinlun\original_videos\429"  # 替换为你的视频根目录
+    output_folder = "converted_video_new"  # 输出文件夹，可自定义
     batch_convert_videos(root_folder, output_folder)
